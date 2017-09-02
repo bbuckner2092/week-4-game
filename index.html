@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Crystal Game</title>
+</head>
+
+<body>
+    <h1 class="collectors"><font color=white> Crystal Collectors!</h1>
+    <section>
+        <p>
+            <font color=green>You will be given a random number at the start of the game.</font>
+        </p>
+        <br>
+        <p>
+            <font color=green>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</font>
+        </p>
+        <br>
+        <p>
+            <font color=green>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</font>
+        </p>
+        <br>
+        <p>
+            <font color=green>The value of each crystal is hidden from you until you click on it.</font>
+        </p>
+        <br>
+        <p>
+            <font color=green>Each time when the game starts, the game will change the values of each crystal.</font>
+        </p>
+        <h1><font color=purple> <span id="number-to-guess"></span></font></h1>
+    </section>
+    <h2 class="numberToGuess"></h2>
+    <div id="crystals"></div>
+    <p class="user">Your total score is:</p>
+    <p class="current-score"></p>
+    <!-- the user will need 4 crystal images; a random number between 19-120; a score counter for the player & text that displays the number of guesses; a text for the number of wins and losses -->
+    <script type="text/javascript" href="assets/javascript/game.js">
+    var targetNumber = 39;
+
+    $("#number-to-guess").text(targetNumber);
+
+
+    var counter = 0;
+
+    var numberOptions = [4, 10, 5, 11];
+
+    for (var i = 0; i < numberOptions.length; i++) {
+
+        var imageCrystal = $("<img>");
+
+        imageCrystal.addClass("crystal-image");
+
+        imageCrystal.attr("src", "http://www.crystalinks.com/cactusquartz.jpg");
+
+        imageCrystal.attr("src", "http://thespiritscience.net/wp-content/uploads/2014/06/lasercrystal.jpg");
+
+        imageCrystal.attr("src", "http://www.crystalinks.com/lasercrystal250.jpg");
+
+        imageCrystal.attr("src", "http://powerthoughtsmeditationclub.com/wp-content/uploads/2015/06/pink_crystals_hd_widescreen_by_blopnuts.jpg");
+
+        imageCrystal.attr("data-crystalValue", numberOptions[i]);
+
+        $("#crystals").append(imageCrystal);
+
+    }
+    var increment = numberOptions[Math.round(Math.random())];
+
+    $(".crystal-image").on("click", function() {
+
+        counter += increment;
+
+        alert("New score: " + counter);
+
+        if (counter === targetNumber) {
+            alert("You got it correct!");
+        } else if (counter >= targetNumber) {
+            alert("You lose!!");
+        }
+
+    });
+
+
+    //need a if statement for when wins = random number, increase (++) wins
+    //need a if statement for when the players score > random number, increase (++) loses
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+.crystal-image {
+	width: 100px;
+	height: 100px;
+}
+
+.collectors {
+	width: 400px;
+	height: 100px;
+	background-color: #db6a00;
+}
+/*Unable to get my background color to show up*/
+.p {
+	width: 900px;
+	height: 900px;
+	background-color: #f7c19b;
+}
+
+.user {
+	width: 150px;
+	height: 25px;
+	background-color: #40e0d0;
+}
+/*Unable to have the background color to show up*/
+.number-to-guess {
+	width: 150px;
+	height: 25px;
+	background-color: 	#29dd00;
+}

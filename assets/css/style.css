@@ -1,28 +1,45 @@
 .crystal-image {
-	width: 100px;
-	height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 .collectors {
-	width: 400px;
-	height: 100px;
-	background-color: #db6a00;
+    width: 270px;
+    height: 100px;
+    background-color: #db6a00;
+    text-align: center;
 }
-/*Unable to get my background color to show up*/
-.p {
-	width: 900px;
-	height: 900px;
-	background-color: #f7c19b;
+
+
+
+
+.paragraph {
+    width: 350px;
+    height: 350px;
+    background-color: #f7c19b;
 }
 
 .user {
-	width: 150px;
-	height: 25px;
-	background-color: #40e0d0;
+    width: 150px;
+    height: 25px;
+    background-color: #40e0d0;
 }
-/*Unable to have the background color to show up*/
+
+
+
 .number-to-guess {
-	width: 150px;
-	height: 25px;
-	background-color: 	#29dd00;
+    width: 300px;
+    height: 25px;
+    background-color: #29dd00;
+    
 }
+
+.aside {
+    width: 75px;
+    height: 100px;
+    background-color: #34DDDD;
+    text-align: center;
+    margin-right: 300px;
+}
+
+<img class="crystal-image" src="http://www.crystalinks.com/cactusquartz.jpg" alt="crystals"><img class="crystal-image" src="http://thespiritscience.net/wp-content/uploads/2014/06/lasercrystal.jpg" alt="crystals"><img class="crystal-image" src="http://www.crystalinks.com/lasercrystal250.jpg" alt="crystals"><img class="crystal-image" src="http://powerthoughtsmeditationclub.com/wp-content/uploads/2015/06/pink_crystals_hd_widescreen_by_blopnuts.jpg" alt="crystals">
